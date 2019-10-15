@@ -563,9 +563,9 @@ class Frame
         $style = $this->_style;
         $cb = $this->_containing_block;
 
-        $x = $this->_position["x"] + $style->length_in_pt($style->margin_left, $cb["w"]);
+        $x = $this->_position["x"] + (float)$style->length_in_pt($style->margin_left, $cb["w"]);
 
-        $y = $this->_position["y"] + $style->length_in_pt($style->margin_top, $cb["h"]);
+        $y = $this->_position["y"] + (float)$style->length_in_pt($style->margin_top, $cb["h"]);
 
         $w = $style->length_in_pt(array($style->border_left_width,
                 $style->padding_left,

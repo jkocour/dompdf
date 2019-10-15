@@ -572,7 +572,7 @@ class Table extends AbstractFrameReflower
         if ($style->border_collapse !== "collapse")
             list($dims[]) = $style->border_spacing;
 
-        $delta = $style->length_in_pt($dims, $this->_frame->get_containing_block("w"));
+        $delta = (float)$style->length_in_pt($dims, $this->_frame->get_containing_block("w"));
 
         $this->_state["min_width"] += $delta;
         $this->_state["max_width"] += $delta;

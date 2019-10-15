@@ -480,7 +480,7 @@ class Page extends AbstractFrameDecorator
                 return false;
         } while ($p = $p->get_parent());
 
-        $margin_height = $frame->get_margin_height();
+        $margin_height = (float)$frame->get_margin_height();
 
         // FIXME If the row is taller than the page and
         // if it the first of the page, we don't break
